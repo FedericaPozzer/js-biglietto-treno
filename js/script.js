@@ -38,18 +38,22 @@ const discount_40 = (ticket_cost *40) / 100;
 console.log("sconto 40% " + discount_40);
  
 
-// APPLICO SCONTI
+// APPLICO SCONTI e STAMPO in PAGINA :)
 if (passenger_age <= 18) 
 {
     let discount_under18 = (ticket_cost - discount_20).toFixed(2);
     console.log("siccome sei minorenne, paghi: " + discount_under18 + " €");
+    document.getElementById("price").innerHTML = discount_under18;
 }
 else if (passenger_age >= 65)
 {
     let discount_over65 = (ticket_cost - discount_40).toFixed(2);
     console.log("siccome sei over 65, paghi: " + discount_over65 + " €");
+    document.getElementById("price").innerHTML = discount_over65;
 }
 else {
     console.log("non hai diritto a nessuno sconto, paghi: " + ticket_cost.toFixed(2) + " €");
+    document.getElementById("price").innerHTML = ticket_cost;
 }
 //.toFixed(2) --> arrotondo a solo due decimali!
+
