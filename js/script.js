@@ -16,3 +16,9 @@
 // NON HO CAPITO LA COSA DELLA FORMA UMANA
 
 
+let travel_km = parseFloat(prompt("quanti km vuoi percorrere?"));
+let passenger_age = parseInt(prompt("quanti anni hai?"));
+// console.log(travel_km + passenger_age);
+
+let ticket_cost = parseFloat((travel_km * 21) / 100);
+console.log(ticket_cost);
